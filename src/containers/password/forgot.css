@@ -1,0 +1,12 @@
+.wrapper h3{
+    margin-top: 10px;
+    display: flex;
+    position: relative;
+    color: #697586;
+    font-weight: x-small;
+    font-size: 0.8rem;
+}
+
+.wrapper .input-box{
+    height: 70px;
+}

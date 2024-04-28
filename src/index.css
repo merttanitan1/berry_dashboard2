@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+  --font-family: 'Roboto', sans-serif;
+  --color-bg: #000f16;
+  --color-text: #c67f23;
+  --color-subtext: #fff;
+  --color-input: #000000;
+  --button-shadow: rgba(0, 0, 0, .1);
+  --toggle-bg: #f0eb9d;
+  --toggle-fg: #ffd000;
+  --dashboard-bg: #010606;
+  
+}
+
+[data-theme="light"] {
+  --color-bg: #ffffff;
+  --color-text: #c67f23;
+  --color-subtext: #2e2e2e;
+  --color-input: #c67f2352;
+  --button-shadow: rgba(0, 0, 0, .1);
+  --dashboard-bg: #EEF2F6;
+}

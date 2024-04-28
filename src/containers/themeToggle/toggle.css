@@ -1,0 +1,23 @@
+.toggle-container label{
+    margin-left: 5px;
+    color: var(--color-subtext)
+}
+
+.toggle-container{
+    position: absolute;
+    top: 2em;
+    right: 2em;
+    font-size: 1.5em;
+}
+.toggle-container input{
+    visibility: hidden;
+}
+
+.toggle-container + label::before{
+    content: "";
+    height: 1em;
+    width: 2em;
+    border-radius: 1em;
+    background-color: var(--toggle-bg);
+    margin-right: 0.5em;
+}
