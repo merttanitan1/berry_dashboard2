@@ -1,36 +1,37 @@
 import React, { useState, useEffect, useRef } from "react";
 import ReactApexChart from "react-apexcharts";
+import './db.json';
 
 function Chart2Content() {
   const [chartData, setChartData] = useState(null);
   const chartRef = useRef(null);
 
   useEffect(() => {
-    setChartData({
-      series: [
-        {
-          name: "Veri 1",
-          data: [30, 40, 45, 50, 49, 60, 70, 91, 125]
-        },
-        {
-          name: "Veri 2",
-          data: [15, 20, 25, 30, 35, 40, 45, 50, 55]
-        }
-      ],
-      options: {
-        chart: {
-          type: 'line',
-          height: 350
-        },
-        title: {
-          text: 'Apex Chart Veri Örneği',
-          align: 'left'
-        },
-        xaxis: {
-          categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep']
-        }
-      }
-    });
+    fetch('./db.json')
+      .then(response => {
+        console.log(response);
+        return response.text();
+      })
+      .then(data => {
+        setChartData({
+          series: data  === undefined ? [] : data.series,
+          options: {
+            chart: {
+              type: 'line',
+              height: 350
+            },
+            title: {
+              text: 'Apex Chart Veri Örneği',
+              align: 'left'
+            },
+            xaxis: {
+              categories: data.categories
+            }
+          }
+        });
+        console.log(data);
+      })
+      .catch(error => console.error('Error:', error));
   }, []);
 
   useEffect(() => {

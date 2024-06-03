@@ -5,7 +5,6 @@ import {Login, Register, Forgot, Dashboard} from './containers';
 import {Strength } from './components';
 import './App.css';
 
-
 const App = () => {
   
   return (
